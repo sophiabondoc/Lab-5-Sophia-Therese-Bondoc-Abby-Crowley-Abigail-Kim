@@ -7,14 +7,14 @@
 #include <fstream>
 #include <string>
 #include <ctime>
-#include "AbbyC.h"      // bubbleSort, mergeSort
-#include "AbbyK.h"      // selectionSort, quickSort
-#include "Sophia.h"     // insertionSort, shellSort
+#include "AbbyC.h" // bubbleSort, mergeSort
+#include "AbbyK.h" // selectionSort, quickSort
+#include "Sophia.h" // insertionSort, shellSort
 using namespace std;
 
 const int MaxItems = 2100000;
 
-// Prints the main menu.
+// Prints the main menu
 void showMenu()
 {
     cout << "\n(1) Read Data from input file\n";
@@ -28,7 +28,7 @@ void showMenu()
     cout << "Enter choice: ";
 }
 
-// Reads numbers from the file into data[]. Returns how many were read.
+// Reads numbers from the file into data[]; returns how many were read.
 int loadData(const string& filename, long data[])
 {
     ifstream in(filename.c_str());
@@ -72,7 +72,7 @@ void timeSort(void (*sortFunc)(long[], int), const string& name,
               const string& outFile, const long original[], long work[], int n)
 {
     for (int i = 0; i < n; i++)
-        work[i] = original[i];            // fresh unsorted copy
+        work[i] = original[i]; // fresh unsorted copy
 
     double begin_time = clock();
     sortFunc(work, n);
@@ -92,13 +92,13 @@ int main()
     // Heap allocation avoids the 8 MB stack limit
     long* original = new long[MaxItems];
     long* work = new long[MaxItems];
-    int n = 0;                 // number of items loaded
+    int n = 0; // number of items loaded
     int choice = -1;
 
     while (choice != 0)
     {
         showMenu();
-        if (!(cin >> choice))   // stop if input is not a number
+        if (!(cin >> choice)) // stop if input is not a number
             break;
 
         if (choice >= 2 && choice <= 7 && n == 0)
