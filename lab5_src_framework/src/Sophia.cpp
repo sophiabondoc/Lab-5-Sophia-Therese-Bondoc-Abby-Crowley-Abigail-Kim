@@ -4,11 +4,8 @@
 
 #include "Sophia.h"
 
-#include <iostream>
-using namespace std;
-
-// Insertion Sort: builds a sorted section at the front of the array by taking each element and shifting
-// larger elements right to make room for it.
+// Insertion Sort: builds a sorted section at the front of the array by taking
+// each element and shifting larger elements right to make room for it.
 void insertionSort(long data[], int n)
 {
     for (int i = 1; i < n; i++)
@@ -26,8 +23,8 @@ void insertionSort(long data[], int n)
     }
 }
 
-// Shell Sort: insertion sort applied to elements that are 'gap' apart, shrinking the gap each pass until
-// it is 1 (a final insertion sort pass).
+// Shell Sort: insertion sort applied to elements that are 'gap' apart,
+// shrinking the gap each pass until it is 1 (a final insertion sort pass).
 void shellSort(long data[], int n)
 {
     for (int gap = n / 2; gap > 0; gap /= 2)

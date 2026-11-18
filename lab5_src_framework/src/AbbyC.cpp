@@ -1,7 +1,11 @@
-#include <iostream>
-using namespace std;
+// Abby Crowley
+// Lab 5, ECE 2161-001
+// Bubble sort and merge sort implementations
 
-// ---------- Bubble Sort ----------
+#include "AbbyC.h"
+
+// Bubble Sort: repeatedly swaps adjacent out-of-order elements so the
+// largest values "bubble" to the end of the array.
 void bubbleSort(long arr[], int n) {
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {
@@ -14,7 +18,8 @@ void bubbleSort(long arr[], int n) {
     }
 }
 
-// ---------- Merge Sort (one function) ----------
+// Merge Sort (bottom-up): merges sorted runs of width 1, 2, 4, ... using a
+// scratch array until the whole array is one sorted run.
 void mergeSort(long arr[], int n) {
     long* temp = new long[n];                  // scratch space
 

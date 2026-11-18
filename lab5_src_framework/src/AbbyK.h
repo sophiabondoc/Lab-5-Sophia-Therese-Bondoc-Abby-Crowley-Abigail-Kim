@@ -1,27 +1,12 @@
-// Name        : cpp.cpp
-// Author      : Abigail Kim
-// Assignment  : Lab 5 ECE 2161 001
-// Copyright   : Your copyright notice
-// Description : Selection Sort and Quick Sort
+// Abigail Kim
+// Lab 5, ECE 2161-001
+// Header for selection sort and quick sort
 
-#ifndef ABBYK_HEADERS_H_
-#define ABBYK_HEADERS_H_
+#ifndef ABBYK_H_
+#define ABBYK_H_
 
-#include <string>
-#include <unistd.h>
-#define MAXSIZE 2100000
-using namespace std;
-
-void printmenu();
-void printarray(long data[], long size);
-int readfile(string infilename, long data[]);
-int writefile(long data[], long size, string outfilename);
-void swap(long& x, long& y);
-
-// Sort functions
+void swapValues(long& x, long& y);
 void selectionSort(long a[], long n);
 void quickSort(long a[], long lo, long hi);
 
-
-
-#endif /* ABBYK_HEADERS_H_ */
+#endif /* ABBYK_H_ */
